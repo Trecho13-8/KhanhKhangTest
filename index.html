@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>2356210016 - Từ Khánh Khang</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap&subset=vietnamese" rel="stylesheet">
+<script>
+function tinhtong (x1,x2)
+{
+return parseInt (x1) + parseInt (x2);
+}
+
+function tinhhieu (x1,x2)
+{
+return parseInt (x1) - parseInt (x2);
+}
+
+function tinhtich (x1,x2)
+{
+return parseInt (x1) * parseInt (x2);
+}
+
+function tinhthuong (x1,x2)
+{
+return parseInt (x1) / parseInt (x2);
+}
+
+function tinhtongdayso(x1,x2)
+{
+var tong;
+tong = 0;
+for(let i=parseInt(x1); i<=parseInt(x2); i++)
+tong=tong+i;
+localStorage.x=tong;
+return tong;
+}
+
+function myPopup() 
+{
+for (let i=1; i<=1; i++)
+alert(localStorage.x)
+}
+
+</script>
+
+</head>
+<body>
+<form>
+<label>Số thứ 1:</label>
+<input type="text" id = "number1" name = "number1"> <br><br>
+<label>Số thứ 2:</label> 
+<input type="text" id= "number2" name = "number2"> <br><br>
+<label> Số thứ 3:</label>
+<input type="text" id="number3" name = "number3"> <br><br>
+<input type="button" onclick ="number3.value=tinhtong(number1.value,number2.value)" value ="Tính tổng">
+<input type="button" onclick ="number3.value=tinhhieu(number1.value,number2.value)" value ="Tính hiệu">
+<input type="button" onclick ="number3.value=tinhtich(number1.value,number2.value)" value ="Tính tích">
+<input type="button" onclick ="number3.value=tinhthuong(number1.value,number2.value)" value ="Tính thương">
+<input type="button" onclick ="number3.value=tinhtongdayso(number1.value,number2.value)"value = "Tính tổng dãy số">
+<input type="button" onclick = myPopup() value = "Thông báo">
+
+
+</form>
+
+</body>
+</html>
